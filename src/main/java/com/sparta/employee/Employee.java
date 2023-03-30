@@ -29,14 +29,14 @@ public class Employee {
     public String toString() {
         return " " +
                 " " + empID +
-                ", " + namePrefix + '\'' +
-                ", " + firstName + '\'' +
-                ", " + middleInitial + '\'' +
-                ", " + lastName + '\'' +
-                ", " + gender + '\'' +
-                ", " + email + '\'' +
-                ", " + dob + '\'' +
-                ", " + joiningDate + '\'' +
+                ", " + namePrefix +
+                ", " + firstName +
+                ", " + middleInitial +
+                ", " + lastName +
+                ", " + gender +
+                ", " + email +
+                ", " + dob +
+                ", " + joiningDate +
                 ", " + salary +
                 ' ';
     }
