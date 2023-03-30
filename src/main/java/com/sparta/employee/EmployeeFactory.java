@@ -1,5 +1,7 @@
 package com.sparta.employees;
 
+import com.sparta.employee.Employee;
+
 import java.io.*;
 import java.util.*;
 
@@ -22,4 +24,5 @@ public class EmployeeFactory {
         // return the first numEmployees values as an array
         return result.subList(0,numEmployees).toArray(new String[0]);
     }
+
 }
