@@ -8,7 +8,7 @@ import java.util.List;
 public class EmployeeStarter {
     public static void start() {
         try {
-            String[] employeeDataArray = com.sparta.employees.EmployeeFactory.getEmployees(1000);
+            String[] employeeDataArray = com.sparta.employees.EmployeeFactory.getEmployees(10);
             List<Employee> employeeList = new ArrayList<>();
 
             for (String employeeData : employeeDataArray) {
