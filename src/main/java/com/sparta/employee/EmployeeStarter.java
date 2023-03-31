@@ -5,6 +5,7 @@ import com.sparta.factory.EmployeeFactory;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,10 +15,12 @@ public class EmployeeStarter {
 
     public static void start() {
         try {
-            Scanner scanner1 = new Scanner(System.in);
-            System.out.print("How many employees would you like printed:");
-            int ans = scanner1.nextInt();//raf change
-            String[] employeeDataArray = EmployeeFactory.getEmployees(ans);
+//            Scanner scanner1 = new Scanner(System.in);
+//            System.out.print("How many employees would you like printed:");
+//            int ans = 1000;
+            Random rand = new Random(); int randomNum = rand.nextInt(1000) + 1;
+            System.out.println(randomNum + " Number of Employees");
+            String[] employeeDataArray = EmployeeFactory.getEmployees(randomNum);
             List<Employee> employeeList = new ArrayList<>();
 
             for (String employeeData : employeeDataArray) {
@@ -66,8 +69,7 @@ public class EmployeeStarter {
             e.printStackTrace();
         } catch (Exception e) {
             logger.error("An error occurred, please input an integer and not characters! " + e.getMessage());
-            e.printStackTrace();
-        }
+            e.printStackTrace();}
 
     }
 }

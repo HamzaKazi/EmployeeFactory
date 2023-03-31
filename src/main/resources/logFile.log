@@ -1,3 +1,7 @@
 [ERROR] 2023-03-31 14:58:31.638 [main] EmployeeStarter - An error occurred: null
 [ERROR] 2023-03-31 15:01:46.563 [main] EmployeeStarter - An error occurred: null
 [ERROR] 2023-03-31 15:04:33.529 [main] EmployeeStarter - An error occurred, please input an integer and not characters! null
+[ERROR] 2023-03-31 15:12:04.098 [main] EmployeeStarter - An error occurred, please input an integer and not characters! Argument 'numEmployees' must be between 1 and 1000
+[ERROR] 2023-03-31 15:13:03.960 [main] EmployeeStarter - An error occurred, please input an integer and not characters! Argument 'numEmployees' must be between 1 and 1000
+[ERROR] 2023-03-31 15:15:13.129 [main] EmployeeStarter - An error occurred, please input an integer and not characters! For input string: "Emp ID"
+[ERROR] 2023-03-31 15:16:54.656 [main] EmployeeStarter - An error occurred, please input an integer and not characters! For input string: "Emp ID"
