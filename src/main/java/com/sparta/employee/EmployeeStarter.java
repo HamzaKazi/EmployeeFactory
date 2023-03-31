@@ -11,7 +11,10 @@ import java.util.Scanner;
 public class EmployeeStarter {
     public static void start() {
         try {
-            String[] employeeDataArray = EmployeeFactory.getEmployees(10);
+            Scanner scanner1 = new Scanner(System.in);
+            System.out.print("How many employees would you like printed:");
+            int ans = scanner1.nextInt();//raf change
+            String[] employeeDataArray = EmployeeFactory.getEmployees(ans);
             List<Employee> employeeList = new ArrayList<>();
 
             for (String employeeData : employeeDataArray) {
@@ -43,7 +46,7 @@ public class EmployeeStarter {
 
             boolean foundEmployee = false;
             for (Employee employee : employeeList) {
-                if (employee.getLastName().equals(searchName)) {
+                if (employee.getLastName().equalsIgnoreCase(searchName)) {//raf change
                     System.out.println("Found employee:");
                     System.out.println(employee);
                     foundEmployee = true;
