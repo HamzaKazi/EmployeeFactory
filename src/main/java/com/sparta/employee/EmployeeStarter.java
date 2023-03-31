@@ -38,12 +38,12 @@ public class EmployeeStarter {
 
             // Search for employee
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Enter an employee ID to search for: ");
-            int searchID = scanner.nextInt();
+            System.out.println("Enter an employee Last Name to search for: ");
+            String searchName = scanner.next();
 
             boolean foundEmployee = false;
             for (Employee employee : employeeList) {
-                if (employee.getEmpID() == searchID) {
+                if (employee.getLastName().equals(searchName)) {
                     System.out.println("Found employee:");
                     System.out.println(employee);
                     foundEmployee = true;
