@@ -1,4 +1,4 @@
-package com.sparta.employees;
+package com.sparta.factory;
 
 import com.sparta.employee.Employee;
 
@@ -24,5 +24,4 @@ public class EmployeeFactory {
         // return the first numEmployees values as an array
         return result.subList(0,numEmployees).toArray(new String[0]);
     }
-
 }

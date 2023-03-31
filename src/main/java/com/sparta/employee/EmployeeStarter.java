@@ -1,14 +1,16 @@
 package com.sparta.employee;
 
+import com.sparta.factory.EmployeeFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class EmployeeStarter {
     public static void start() {
         try {
-            String[] employeeDataArray = com.sparta.employees.EmployeeFactory.getEmployees(10);
+            String[] employeeDataArray = EmployeeFactory.getEmployees(10);
             List<Employee> employeeList = new ArrayList<>();
 
             for (String employeeData : employeeDataArray) {
@@ -31,6 +33,25 @@ public class EmployeeStarter {
             // Print the employeeList
             for (Employee employee : employeeList) {
                 System.out.println(employee);
+            }
+
+            // Search for employee
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter an employee ID to search for: ");
+            int searchID = scanner.nextInt();
+
+            boolean foundEmployee = false;
+            for (Employee employee : employeeList) {
+                if (employee.getEmpID() == searchID) {
+                    System.out.println("Found employee:");
+                    System.out.println(employee);
+                    foundEmployee = true;
+                    break;
+                }
+            }
+
+            if (!foundEmployee) {
+                System.out.println("Employee not found.");
             }
 
         } catch (IOException e) {

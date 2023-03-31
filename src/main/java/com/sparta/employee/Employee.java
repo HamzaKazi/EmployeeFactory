@@ -1,6 +1,6 @@
 package com.sparta.employee;
 
-public class Employee {
+public class Employee implements Comparable<Employee> {
     private int empID;
     private String namePrefix;
     private String firstName;
@@ -26,23 +26,13 @@ public class Employee {
     }
 
     @Override
-    public String toString() {
-        return
-                empID +
-                ", " + namePrefix +
-                ", " + firstName +
-                ", " + middleInitial +
-                ", " + lastName +
-                ", " + gender +
-                ", " + email +
-                ", " + dob +
-                ", " + joiningDate +
-                ", " + salary +
-                ' ';
+    public int compareTo(Employee o) {
+        return Integer.compare(this.empID, o.empID);
     }
 
-    public Employee(int empNo, String birthDate, String firstName, String lastName, char gender, String hireDate) {
-
+    @Override
+    public String toString() {
+        return empID + ", " + namePrefix + ", " + firstName + ", " + middleInitial + ", " + lastName + ", " + gender + ", " + email + ", " + dob + ", " + joiningDate + ", " + salary;
     }
 
     public int getEmpID() {

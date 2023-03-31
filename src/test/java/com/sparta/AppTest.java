@@ -1,12 +1,11 @@
 package com.sparta;
 
+import com.sparta.factory.EmployeeFactory;
 import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.util.regex.Pattern;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Unit test for simple App.
@@ -45,7 +44,7 @@ public class AppTest
         void testGetEmployees() {
             try {
                 int n = 10;
-                String[] employees = com.sparta.employees.EmployeeFactory.getEmployees(n);
+                String[] employees = EmployeeFactory.getEmployees(n);
                 assertEquals(n, employees.length);
 
                 String regex = "\\d{1,8}\t(?:Mr\\.||Ms\\.||Mrs\\.||Dr\\.||Drs\\.)\t[a-zA-Z ]+\t[a-zA-Z]\t[a-zA-Z ]+\t[MF]\t[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\t\\d{1,2}/\\d{1,2}/\\d{4}\t\\d{1,2}/\\d{1,2}/\\d{4}\t\\d+";
