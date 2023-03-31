@@ -1,4 +1,5 @@
 package com.sparta.employee;
+import java.util.Objects;
 
 
 public class Employee implements Comparable<Employee> {
@@ -35,6 +36,20 @@ public class Employee implements Comparable<Employee> {
     public String toString() {
         return empID + ", " + dob +","+ firstName + ", " + lastName + ", " + gender + ", "  + joiningDate;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return empID == employee.empID &&
+                Objects.equals(firstName, employee.firstName) &&
+                Objects.equals(lastName, employee.lastName) &&
+                gender == employee.gender &&
+                Objects.equals(dob, employee.dob) &&
+                Objects.equals(joiningDate, employee.joiningDate);
+    }
+
 
     public int getEmpID() {
         return empID;
