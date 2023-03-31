@@ -13,17 +13,17 @@ public class Employee implements Comparable<Employee> {
     private String joiningDate;
     private int salary;
 
-    public Employee(int empID, String namePrefix, String firstName, String middleInitial, String lastName, String gender, String email, String dob, String joiningDate, int salary) {
+    public Employee(int empID, String dob, String firstName,  String lastName, String gender, String joiningDate) {
         this.empID = empID;
-        this.namePrefix = namePrefix;
+      //  this.namePrefix = namePrefix;
         this.firstName = firstName;
-        this.middleInitial = middleInitial;
+        // this.middleInitial = middleInitial;
         this.lastName = lastName;
         this.gender = gender;
-        this.email = email;
+       // this.email = email;
         this.dob = dob;
         this.joiningDate = joiningDate;
-        this.salary = salary;
+        //this.salary = salary;
     }
 
     @Override

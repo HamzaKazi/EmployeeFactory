@@ -20,7 +20,7 @@ public class EmployeeService {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] fields = line.split(",");
-                Employee employee = new Employee(Integer.parseInt(fields[0]),fields[1], fields[2], fields[3], fields[4], fields[5], fields[6], fields[7], fields[8], Integer.parseInt(fields[9]));
+                Employee employee = new Employee(Integer.parseInt(fields[0]), fields[7], fields[2],fields[4], fields[5],fields[8]);
                 employeeList.add(employee);
             }
         } catch (IOException e) {

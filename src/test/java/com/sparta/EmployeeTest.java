@@ -12,7 +12,7 @@ public class EmployeeTest {
 
     @Test
     public void testToString() {
-        Employee employee = new Employee(123, "Mr", "John", "D", "Cena", "Male", "john.cena@wwe.com", "01/01/1990", "01/01/2020", 50000);
+        Employee employee = new Employee(123, "01/01/1990","John","Cena","Male", "01/01/2020");
         String expected = "123, Mr, John, D, Cena, Male, john.cena@wwe.com, 01/01/1990, 01/01/2020, 50000";
         String actual = employee.toString();
         assertEquals(expected, actual);
@@ -20,7 +20,7 @@ public class EmployeeTest {
 // test
     @Test
     public void testConstructorAndGetters() {
-        Employee employee = new Employee(123, "Mr", "John", "D", "Cena", "Male", "john.cena@wwe.com", "01/01/1990", "01/01/2020", 50000);
+        Employee employee = new Employee(123, "01/01/1990","John","Cena","Male", "01/01/2020");
 
         assertEquals(123, employee.getEmpID());
         assertEquals("Mr", employee.getNamePrefix());

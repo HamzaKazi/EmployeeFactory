@@ -30,7 +30,7 @@ public class EmployeeStarter {
                 String joiningDate = data[8];
                 int salary = Integer.parseInt(data[9]);
 
-                Employee employee = new Employee(empID, namePrefix, firstName, middleInitial, lastName, gender, email, dob, joiningDate, salary);
+                Employee employee = new Employee(Integer.parseInt(data[0]), data[7], data[2],data[4], data[5],data[8]);
                 employeeList.add(employee);
             }
 
