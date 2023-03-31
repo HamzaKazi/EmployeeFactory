@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
 public class EmployeeStarter {
     public static void start() {
         try {
@@ -57,5 +58,6 @@ public class EmployeeStarter {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 }
