@@ -6,9 +6,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class EmployeeStarter {
+    private static final Logger logger = LogManager.getLogger(EmployeeStarter.class);
+
     public static void start() {
         try {
             Scanner scanner1 = new Scanner(System.in);
@@ -59,6 +62,10 @@ public class EmployeeStarter {
             }
 
         } catch (IOException e) {
+            logger.error("An error occurred while getting employee data from the factory: " + e.getMessage());
+            e.printStackTrace();
+        } catch (Exception e) {
+            logger.error("An error occurred, please input an integer and not characters! " + e.getMessage());
             e.printStackTrace();
         }
 
