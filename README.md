@@ -1,54 +1,54 @@
+**Description Summary of Our Repository:**
+ Our repository contains a binary search tree that takes advantage of generics so that it can accept any object into it for performing operations like searching, adding and sorting on those objects.We were given a class that assists us with loading values from a CSV that we could then use to generate Employee objects. we can pass a String that simply contains the lastName of an employee to fetch their object from the tree, another detail abstracted away would be conversions from Object[] to Employee[].
 
-# MySQL Employees Projects Week 3 - SOLID/OOP
+**Requirements to Run these Files:**
+JDK 19
+Maven
+JVM
 
-## General Requirements
+**Make sure to change the pom.xml to match the version of Java that your JVM supports (19) and then run the following commands:**
 
-All projects:
+mvn install
+java -cp target/EmployeeFactory-1.0-SNAPSHOT.jar com.sparta.group3.Main
 
--   Must be run as Scrum projects
--   Should be groups or 5 or 6
--   Must apply SOLID & OO principles
--   Must use the MVC pattern where there is a user interface - ONLY ONCE WE HAVE COVERED THIS AND IT IS APPROPRIATE
--   Should use well-known design patterns where appropriate
--   Must include comprehensive  `JUnit`  testing or equivalent
--   Should begin with the creation of tests, in line with a test-driven development approach
--   Must use  `log4j2`  for appropriate runtime logging or equivalent
--   Must implement appropriate exception handling
--   Must be hosted on GitHub and thoroughly documented, through a README.md file
 
-## Purpose
+**Project Roles:**
 
-In addition to the general goals of projects, this project will give trainees an opportunity to:
+| Role        | Contributor  | 
+|-------------|--------------|
+| Scrum Lead  | Rafael Lopes |       |
+| GitHub Lead | Hamza Kazi   |       |
+| Dev/Tester  | Onur Belek   |       |
+| Dev/Tester  | Omar Hussain |       |
+| Dev/Tester  | Anusha Gampa |       |
 
--   Parse data into a suitable data structure
--   Use the  `Collections`  framework
--   Develop a collection class from scratch
--   Create and use a nested class
--   Populate a binary tree from unsorted data
--   Provide a user interface and searching capability
--   Using interfaces
+**Details of the Functionality in Major Sections:**
 
-## Requirements
+BinarySearchTree.java:
 
-### Phase 1
+Our binary search tree accepts and sorts any object that implements the Comparable interface.It has one constructor with one parameter that takes list of objects and for each object it calls insert method to insert each object into a Binary Search Tree according to binary tree rules. It has an Inner class of Node which initializes the 3 different types of nodes that are current node, left node, right node.
+            
 
--   _Add the provided factory class,  `EmployeeFactory.java`, to a suitable package within your project_
--   _Add the provided sample data file,  `employees.csv`, to the  `src/main/resources`  folder in your project_
--   Call  `EmployeeFactory.getEmployees(n)`  to generate an array of random employee data of size  `n`  (`1 <= n <= 1000`)
--   Employee data is provided as an array of  `String`s, returned from  `getEmployees()`, each  `String`  representing
-    -   `emp_no`  (up to 8 digits)
-    -   `birth_date`  (`YYYY-MM-DD`,  `ISO 8601`  calendar date format)
-    -   `first_name`  (alpha characters and spaces only)
-    -   `last_name`  (alpha characters and spaces only)
-    -   `gender`  (single character)
-    -   `hire_date`  (`YYYY-MM-DD`)
--   The values for the employee data will be separated by commas within the  `String`
-    -   For example,  `"1234567,1995-01-23,Teagan,Griffith,F,2012-04-12"`
--   Convert each element in the array into an  `Employee`  object, having created a suitable class, and store it in a  `List`  using a suitable concrete type
+**Employee.java:**
+Employee class implements Comparable interface. Class represents an individual employee object. It has private variables for employee number, birth date, first name, last name, gender, and hire date. The class has a constructor that takes employee data as a string and parses it to assign the values to the private variables.The class also has getters for each private variable and overrides the toString method to return formatted employee data. 
+          
+we have some of Getter and setter methods like
 
-### Phase 2
+ public int getEmpID() ;
 
--   Once the provided data have been stored in a  `List`, convert the  `List`  to a binary tree using a class you've created for this purpose (using  `last_name`  as the key)
--   Use a nested class to represent a node in the tree - ONLY IF WE HAVE COVERED THIS AND IT IS APPROPRIATE
--   The tree should allow for multiple employees with the same  `last_name`
--   Allow the user to search for a specific employee by  `last_name`
+returns an employee id from tree.
+
+public String getFirstName();
+
+returns first name of an employee.
+
+public void setLastName(String lastName);
+
+set the employee last name.
+
+**Summary of Testing:**
+
+We used JUnit 5 in our program to unit test our classes. We primarily focused on the getters and setters of every class that we created. and also we tested search, insertion methods functionality with different set of inputs.
+
+
+   
